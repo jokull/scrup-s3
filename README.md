@@ -1,8 +1,8 @@
 Scrup S3
 ========
 
-A simple server to receive Scrup screenshots, upload to S3 and return a public
-viewable URL to the image.
+A simple server to receive [Scrup](https://github.com/rsms/scrup) screenshots, 
+upload to S3 and return a public viewable URL to the image.
 
 + Ready for Heroku
 + Minimal code, easy to understand and customize
