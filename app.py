@@ -12,7 +12,11 @@ s3 = connect_s3()
 bucket = s3.get_bucket(os.environ['S3_BUCKET'])
 hostname = os.environ.get('S3_CNAME', bucket.name + ".s3.amazonaws.com")
 
-headers = {'Content-Type': 'image/png'}
+headers = {
+    'Content-Type': 'image/png',
+    'Cache-Control': 'max-age={}'.format(60 * 60 * 24 * 30),  # Thirty days
+}
+
 
 app = Flask(__name__)
 app.config['DEBUG'] = os.environ.get("DEBUG") == "true"
