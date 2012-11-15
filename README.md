@@ -12,8 +12,10 @@ Setup
 
 1. Clone and `cd scrup-s3`
 2. `$ virtualenv venv`
-5. `$ heroku create scrup-xxxx`
-6. `$ touch .env` and edit:
+3. `$ heroku create scrup-xxxx`
+4. `$ touch .env`
+
+Sample `.env`
 
     AWS_ACCESS_KEY_ID=...
     AWS_SECRET_ACCESS_KEY=...
