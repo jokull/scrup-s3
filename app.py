@@ -18,6 +18,11 @@ app = Flask(__name__)
 app.config['DEBUG'] = os.environ.get("DEBUG") == "true"
 
 
+@app.route('/')
+def index():
+    return ''
+
+
 @app.route('/', methods=['POST'])
 def receiver():
     key = Key(bucket)
